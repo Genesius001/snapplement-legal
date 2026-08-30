@@ -1,13 +1,75 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Snapplement — Support</title>
-<style>body{font-family:-apple-system,Segoe UI,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}</style></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Snapplement Support</title>
+  <style>
+    :root { color-scheme:light dark; --bg:#f7f7f5; --surface:#fff; --text:#171814; --muted:#62665f; --accent:#b86f00; --line:#dedfd9; }
+    @media (prefers-color-scheme:dark) { :root { --bg:#111310; --surface:#1b1e1a; --text:#f4f5f1; --muted:#b7bcb3; --accent:#ffb22e; --line:#363a34; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:860px; margin:0 auto; padding:56px 22px 72px; }
+    h1 { margin:0 0 14px; font-size:clamp(2.4rem,8vw,4.4rem); line-height:.98; letter-spacing:-.045em; }
+    h2 { font-size:1.2rem; margin:.2em 0 .4em; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.78rem; }
+    .lead { max-width:650px; color:var(--muted); font-size:1.15rem; }
+    .contact { display:inline-block; margin:12px 0 36px; padding:13px 18px; background:#f5a000; color:#171814; border-radius:12px; font-weight:700; text-decoration:none; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+    .card { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:22px; }
+    .card p { color:var(--muted); margin-bottom:0; }
+    nav { margin-top:30px; display:flex; flex-wrap:wrap; gap:18px; }
+    nav a, .textlink { color:var(--accent); text-underline-offset:3px; }
+  </style>
+</head>
 <body>
-<h1>Snapplement Support</h1>
-<p>Snapplement turns photos of your supplement bottles into a personalized intake schedule
-with smart reminders.</p>
-<p>Questions, feedback, or issues? Email us:
-<a href="mailto:tigr.igorevich@gmail.com">tigr.igorevich@gmail.com</a> — we reply within
-2 business days.</p>
-<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
-</body></html>
+<main>
+  <div class="eyebrow">Snapplement support</div>
+  <h1>Keep your supplement labels clear.</h1>
+  <p class="lead">Snapplement reads visible label details with AI, lets you review every result,
+  and keeps the products you confirm in an editable stack. No account required.</p>
+  <a class="contact" href="mailto:griffonix.inc@gmail.com">Email support</a>
+
+  <section class="grid" aria-label="Frequently asked questions">
+    <div class="card">
+      <h2>AI read the label incorrectly</h2>
+      <p>Compare the result with the package and correct any unclear field before saving. A clearer
+      front photo and Supplement Facts photo may improve the next attempt.</p>
+    </div>
+    <div class="card">
+      <h2>Where is my stack stored?</h2>
+      <p>Confirmed details and saved label photos are stored in the app on your device. Photos used
+      for AI recognition are sent to Snapplement's backend and Google Cloud Vertex AI.</p>
+    </div>
+    <div class="card">
+      <h2>What is included with Free?</h2>
+      <p>Two confirmed AI label scans are included. Manual entry and products already saved in your
+      Free stack remain available.</p>
+    </div>
+    <div class="card">
+      <h2>Billing or Restore Purchases</h2>
+      <p>Use Restore Purchases on the Pro screen. Manage or cancel an active subscription from your
+      Apple Account subscription settings.</p>
+    </div>
+    <div class="card">
+      <h2>Is this medical advice?</h2>
+      <p>No. Snapplement organizes label information. It does not choose supplements, determine a
+      medically appropriate dose, assess interactions, diagnose, or treat.</p>
+    </div>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email <a class="textlink" href="mailto:griffonix.inc@gmail.com">griffonix.inc@gmail.com</a>
+      with the app version, device model, and a short description of the issue. Do not send medical
+      records or unnecessary sensitive information.<br><br>
+      Griffonix Inc.<br>
+      131 Continental Dr, Suite 305<br>
+      Newark, Delaware 19713<br>
+      New Castle County, United States</p>
+    </div>
+  </section>
+
+  <nav><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</main>
+</body>
+</html>

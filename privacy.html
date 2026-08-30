@@ -1,49 +1,171 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Snapplement — Privacy Policy</title>
-<style>body{font-family:-apple-system,Segoe UI,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1,h2{line-height:1.3}small{color:#666}</style></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Snapplement Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f7f7f5; --surface:#fff; --text:#171814; --muted:#62665f; --accent:#b86f00; --line:#dedfd9; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#111310; --surface:#1b1e1a; --text:#f4f5f1; --muted:#b7bcb3; --accent:#ffb22e; --line:#363a34; } }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:760px; margin:0 auto; padding:48px 22px 72px; }
+    article { background:var(--surface); border:1px solid var(--line); border-radius:24px; padding:clamp(24px,5vw,52px); }
+    h1 { margin:0 0 8px; font-size:clamp(2rem,6vw,3.25rem); line-height:1.05; letter-spacing:-.035em; }
+    h2 { margin:2.1em 0 .45em; font-size:1.3rem; line-height:1.25; }
+    p, li { max-width:68ch; }
+    ul { padding-left:1.25em; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.78rem; }
+    .meta, .note { color:var(--muted); }
+    .summary { font-size:1.08rem; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    nav { margin-top:28px; display:flex; flex-wrap:wrap; gap:16px; }
+  </style>
+</head>
 <body>
-<h1>Snapplement Privacy Policy</h1>
-<small>Effective date: July 11, 2026 · Griffonix Inc.</small>
+<main>
+  <article>
+    <div class="eyebrow">Snapplement · Griffonix Inc.</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective August 29, 2026</p>
 
-<h2>Summary</h2>
-<p>Snapplement is designed to keep your data on your device. We do not require an account,
-we do not sell data, and we do not use advertising trackers.</p>
+    <p class="summary">Snapplement does not require an account, sell personal data, or use
+    personal data for cross-app tracking or targeted advertising. Confirmed label details and
+    saved bottle photos are stored in the app on your device. When you choose to scan a label,
+    the selected photos leave your device and are processed by Snapplement's backend and Google
+    Cloud Vertex AI (Gemini) to return a recognition result.</p>
 
-<h2>What we process and why</h2>
-<p><b>Bottle photos.</b> When you snap or select a photo of a supplement bottle, it is
-transmitted securely to our server and processed by Google Cloud Vertex AI (Gemini) to
-identify the product. Photos are processed in memory for recognition only and are not
-retained on our servers after processing. You are asked for consent in the app before any
-photo is processed.</p>
-<p><b>Your supplement list and schedule.</b> Stored locally on your device only. We do not
-receive or store it. Deleting the app deletes this data.</p>
-<p><b>Device identifier.</b> The app generates a random identifier (not Apple's advertising
-ID) used solely to prevent abuse of our recognition service (rate limiting).</p>
-<p><b>Purchases.</b> Subscriptions are processed by Apple. We use RevenueCat to verify
-subscription status. We never see your payment details.</p>
+    <h2>1. Scope and controller</h2>
+    <p>This Policy explains how Griffonix Inc. ("Griffonix," "we," "us") processes information
+    when you use the Snapplement mobile application, recognition service, public support and
+    legal pages, and related subscription features.</p>
 
-<h2>What we do NOT collect</h2>
-<p>No name, email, contacts, location, health records, browsing history, or advertising
-identifiers. No analytics SDKs are included in the current version. If this changes, this
-policy and the App Store privacy label will be updated first.</p>
+    <h2>2. Information kept on your device</h2>
+    <p>Snapplement stores the following information in the app's storage on your device:</p>
+    <ul>
+      <li>product, brand, serving-size, ingredient, amount, category, and review details you
+      confirm or enter;</li>
+      <li>front and back label photos saved with confirmed products;</li>
+      <li>your photo-processing consent timestamp;</li>
+      <li>a random installation identifier;</li>
+      <li>the number of included AI confirmations used and local subscription-access state.</li>
+    </ul>
+    <p>Snapplement does not offer an account or cloud sync in this release. Removing individual
+    products removes their app records. Deleting the app removes its local data, subject to your
+    device backup, file-system, and operating-system behavior.</p>
 
-<h2>Third-party processors</h2>
-<p>Google Cloud (Vertex AI — photo recognition, server hosting), Apple (payments),
-RevenueCat (subscription status). Each receives only the minimum described above.</p>
+    <h2>3. AI label recognition</h2>
+    <p>When you ask Snapplement to recognize a label, the app sends the selected front photo,
+    optional back photo, and a random installation identifier over an encrypted connection to
+    Snapplement's backend. The backend sends the photos to Google Cloud Vertex AI (Gemini) to
+    extract visible label information.</p>
+    <p>Snapplement's backend processes submitted photos in memory and does not persist the raw
+    photos after the request completes. The current release configuration does not enable the
+    optional server-side recognition-result cache. If we enable server-side result caching or
+    materially change this retention practice, we will update this Policy before doing so.</p>
+    <p>Google states that it does not use customer data to train its models without permission.
+    Google may retain limited prompts, outputs, or service data for security and abuse monitoring
+    under its applicable terms and retention controls.</p>
+    <p>AI recognition may be incomplete or incorrect. Snapplement asks you to review and, where
+    necessary, correct the extracted details before saving them.</p>
 
-<h2>Your choices and rights</h2>
-<p>You can deny camera/photo access (the app then has limited functionality), delete the
-app to remove all local data, and manage subscriptions in your Apple Account settings.
-Depending on your region (e.g., GDPR, CCPA) you may have additional rights — contact us
-to exercise them.</p>
+    <h2>4. Service limits and operational data</h2>
+    <p>The random installation identifier is not Apple's advertising identifier. Snapplement's
+    backend uses it to apply recognition limits and prevent abuse. In the current architecture,
+    request counts are held in the memory of a backend instance and are not written to
+    Snapplement's application logs.</p>
+    <p>To operate, secure, and troubleshoot the service, we process limited technical data such
+    as request time, number and byte size of photos, detected file type, request outcome, generic
+    error type, latency, model token counts, confidence, generic result category, and ingredient
+    count. Snapplement's application logs are designed not to include submitted photos, product
+    names, brands, ingredient names, raw model responses, or the random installation identifier.
+    Operational logs are retained for no longer than 30 days unless a longer period is required
+    to investigate a security incident or comply with law.</p>
+    <p>Google Cloud Run request logs also contain standard connection information, including IP
+    address, user agent, request URL, status, and latency, to deliver, monitor, and protect the
+    service. These request logs are stored in the project's default Cloud Logging bucket, which
+    is currently configured for a 30-day retention period.</p>
 
-<h2>Children</h2>
-<p>Snapplement is intended for users 18 years or older and is not directed at children.</p>
+    <h2>5. Subscriptions</h2>
+    <p>Apple processes purchases and payment details. Snapplement uses RevenueCat to retrieve
+    subscription products, determine access, process purchase status, restore purchases, and
+    provide subscription analytics and customer history. RevenueCat may process an anonymous App
+    User ID, receipt and transaction information, subscription status, and limited device or
+    operating-system information. Snapplement does not receive your full payment-card number.</p>
 
-<h2>Changes</h2>
-<p>We will post any changes on this page with an updated effective date.</p>
+    <h2>6. Support communications</h2>
+    <p>If you contact support, we process the email address, message, and any information you
+    choose to include so we can respond and troubleshoot. Please do not send medical records or
+    other sensitive information that is not needed for support.</p>
+    <h2>7. Service providers and disclosures</h2>
+    <p>We use service providers only for the purposes described above:</p>
+    <ul>
+      <li><strong>Google Cloud</strong> — backend hosting, operational logging, security, and
+      Vertex AI label recognition;</li>
+      <li><strong>Apple</strong> — app distribution, device permissions, and payments;</li>
+      <li><strong>RevenueCat</strong> — subscription catalog, entitlement, purchase, and restore
+      functionality and subscription analytics;</li>
+      <li><strong>GitHub Pages</strong> — hosting the public support, Privacy Policy, and Terms of
+      Service pages.</li>
+    </ul>
+    <p>We may disclose information when required by law, to protect users or the service, or as
+    part of a corporate transaction subject to appropriate safeguards. We do not sell personal
+    data.</p>
 
-<h2>Contact</h2>
-<p>Griffonix Inc. — <a href="mailto:tigr.igorevich@gmail.com">tigr.igorevich@gmail.com</a></p>
-</body></html>
+    <h2>8. Retention and deletion</h2>
+    <ul>
+      <li>App data and saved label photos remain on your device until you remove them or delete
+      the app.</li>
+      <li>Raw photos submitted for recognition are not persisted by Snapplement's backend after
+      the request completes.</li>
+      <li>Snapplement operational logs are kept for no longer than 30 days, except as described
+      above.</li>
+      <li>Apple, Google Cloud, and RevenueCat retain information under their own terms and legal
+      obligations.</li>
+      <li>Support messages are retained only as long as reasonably necessary to respond, protect
+      the service, and meet legal obligations.</li>
+    </ul>
+
+    <h2>9. Your choices and rights</h2>
+    <p>You can deny camera or photo-library access, stop using AI recognition, use manual entry,
+    remove saved products, delete the app's local data, manage your subscription in your Apple
+    Account, and contact us about access, correction, deletion, objection, restriction, or other
+    privacy rights available in your region. You can stop future photo processing at any time by
+    not submitting another photo and by revoking camera or photo-library access in system
+    settings; this does not affect processing already completed.</p>
+    <p>Because Snapplement has no user account, we may need limited information to locate a support
+    message or third-party subscription record. We cannot remotely delete data stored only on your
+    device.</p>
+
+    <h2>10. International processing</h2>
+    <p>Our service providers may process information in the United States and other countries.
+    Where required, transfers are handled using contractual or other legally recognized
+    safeguards.</p>
+
+    <h2>11. Age</h2>
+    <p>Snapplement is intended for people aged 16 and older and is not directed to children under
+    16. If we learn that we processed information from a child under 16 contrary to applicable
+    law, we will take reasonable steps to delete it.</p>
+
+    <h2>12. Security</h2>
+    <p>We use reasonable technical and organizational safeguards, including encrypted network
+    transport and data-minimizing application logs. No system can guarantee absolute security.</p>
+
+    <h2>13. Changes</h2>
+    <p>We may update this Policy as the service or law changes. We will post the revised version
+    here with a new effective date and provide additional notice when required.</p>
+
+    <h2>14. Contact</h2>
+    <p>Privacy questions and requests: <a href="mailto:griffonix.inc@gmail.com">griffonix.inc@gmail.com</a></p>
+    <p>Controller:<br>
+    Griffonix Inc.<br>
+    131 Continental Dr, Suite 305<br>
+    Newark, Delaware 19713<br>
+    New Castle County, United States</p>
+
+    <nav><a href="./">Support</a><a href="terms.html">Terms of Service</a></nav>
+  </article>
+</main>
+</body>
+</html>
