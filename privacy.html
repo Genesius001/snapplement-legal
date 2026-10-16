@@ -28,13 +28,15 @@
   <article>
     <div class="eyebrow">Snapplement · Griffonix Inc.</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective August 29, 2026</p>
+    <p class="meta">Effective October 16, 2026</p>
 
     <p class="summary">Snapplement does not require an account, sell personal data, or use
     personal data for cross-app tracking or targeted advertising. Confirmed label details and
     saved bottle photos are stored in the app on your device. When you choose to scan a label,
     the selected photos leave your device and are processed by Snapplement's backend and Google
-    Cloud Vertex AI (Gemini) to return a recognition result.</p>
+    Cloud Vertex AI (Gemini) to return a recognition result. If you request server-assisted
+    planning, relevant stack, instruction, and day information also leaves your device as
+    described below. Supplement and routine details can reveal health-related information.</p>
 
     <h2>1. Scope and controller</h2>
     <p>This Policy explains how Griffonix Inc. ("Griffonix," "we," "us") processes information
@@ -46,8 +48,10 @@
     <ul>
       <li>product, brand, serving-size, ingredient, amount, category, and review details you
       confirm or enter;</li>
-      <li>front and back label photos saved with confirmed products;</li>
-      <li>your photo-processing consent timestamp;</li>
+      <li>front, facts, and any additional usage-label photos saved with confirmed products;</li>
+      <li>saved directions, any recorded amounts and their source, day and meal times, schedules,
+      reminder settings, and intake history;</li>
+      <li>your versioned choice about AI photo and planning processing and related timestamps;</li>
       <li>a random installation identifier;</li>
       <li>the number of included AI confirmations used and local subscription-access state.</li>
     </ul>
@@ -57,7 +61,7 @@
 
     <h2>3. AI label recognition</h2>
     <p>When you ask Snapplement to recognize a label, the app sends the selected front photo,
-    optional back photo, and a random installation identifier over an encrypted connection to
+    optional facts and additional usage-label photos, and a random installation identifier over an encrypted connection to
     Snapplement's backend. The backend sends the photos to Google Cloud Vertex AI (Gemini) to
     extract visible label information.</p>
     <p>Snapplement's backend processes submitted photos in memory and does not persist the raw
@@ -69,6 +73,20 @@
     under its applicable terms and retention controls.</p>
     <p>AI recognition may be incomplete or incorrect. Snapplement asks you to review and, where
     necessary, correct the extracted details before saving them.</p>
+
+    <h2>3a. Server-assisted planning</h2>
+    <p>If you request server-assisted planning, the app sends the information needed to draft a
+    plan to our backend. Depending on what you provide, that can include your stack, label and
+    ingredient details, routine and meal times, instructions, any amounts you record and whether
+    instructions came from a label or your own entry, and health-related context such as a named
+    medicine or other answers. Some planning and stack-review paths may send a limited, relevant
+    projection to Vertex AI for optional AI analysis. The service also uses software rules and
+    validation; an AI result does not establish medical safety or suitability. These features
+    are not entirely on-device or available without a network connection.</p>
+    <p>The current AI-processing choice covers label photos and planning inputs. You can review
+    or withdraw it in Settings. Withdrawal stops future AI requests after the choice is saved;
+    it cannot undo processing already completed. Your locally saved stack, routine, and history
+    are not deleted by withdrawing permission. Camera and notification permissions are separate.</p>
 
     <h2>4. Service limits and operational data</h2>
     <p>The random installation identifier is not Apple's advertising identifier. Snapplement's
@@ -102,7 +120,7 @@
     <p>We use service providers only for the purposes described above:</p>
     <ul>
       <li><strong>Google Cloud</strong> — backend hosting, operational logging, security, and
-      Vertex AI label recognition;</li>
+      Vertex AI label recognition and optional planning analysis;</li>
       <li><strong>Apple</strong> — app distribution, device permissions, and payments;</li>
       <li><strong>RevenueCat</strong> — subscription catalog, entitlement, purchase, and restore
       functionality and subscription analytics;</li>
@@ -128,12 +146,13 @@
     </ul>
 
     <h2>9. Your choices and rights</h2>
-    <p>You can deny camera or photo-library access, stop using AI recognition, use manual entry,
+    <p>You can deny camera or photo-library access, withdraw AI-processing permission in Settings,
+    stop submitting AI recognition or planning requests, use manual entry,
     remove saved products, delete the app's local data, manage your subscription in your Apple
     Account, and contact us about access, correction, deletion, objection, restriction, or other
-    privacy rights available in your region. You can stop future photo processing at any time by
-    not submitting another photo and by revoking camera or photo-library access in system
-    settings; this does not affect processing already completed.</p>
+    privacy rights available in your region. Not submitting further requests stops new uploads;
+    revoking camera access alone does not withdraw permission to process existing photos or
+    planning inputs. These choices do not affect processing already completed.</p>
     <p>Because Snapplement has no user account, we may need limited information to locate a support
     message or third-party subscription record. We cannot remotely delete data stored only on your
     device.</p>
